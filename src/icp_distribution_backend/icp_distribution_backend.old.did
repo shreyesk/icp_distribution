@@ -9,7 +9,7 @@ service : {
   "get_principal_from_text": (text) -> (principal);
 
   "create_new_canister": () -> (principal);
-  "get_created_principals": () -> (vec principal) query;
+  "get_created_principals": () -> (vec principal);
   "add_cycles": (nat) -> ();
   "get_created_balance": (text) -> (nat);
 }
