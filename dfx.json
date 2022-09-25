@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "dfx": "0.11.2",
+  "canisters": {
+    "icp_distribution_backend": {
+      "type": "rust",
+      "package": "icp_distribution_backend",
+      "candid": "src/icp_distribution_backend/icp_distribution_backend.did"
+    },
+    "icp_distribution_frontend": {
+      "type": "assets",
+      "source": [
+        "src/icp_distribution_frontend/assets"
+      ],
+      "dependencies": [
+        "icp_distribution_backend"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
